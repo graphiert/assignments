@@ -11,12 +11,16 @@
     </style>
   </head>
   <body>
-    <h1>Oops...</h1>
-    <p>Disini tidak ada tugas. Coba kunjungi tautan yang telah dibagikan.</p>
     <script>
-      if (window.location.pathname == "/basindo/topic-1/poster") {
+      const webPath = () =>
+        window.location.pathname.endsWith("/")
+          ? window.location.pathname.slice(0, -1)
+          : window.location.pathname;
+      if (webPath() == "/basindo/topic-1/poster") {
         window.location.href = "https://www.instagram.com/p/C_iTpsWSm8m";
       }
     </script>
+    <h1>Oops...</h1>
+    <p>Disini tidak ada tugas. Coba kunjungi tautan yang telah dibagikan.</p>
   </body>
 </html>
