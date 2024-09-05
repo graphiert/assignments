@@ -8,10 +8,6 @@
       body {
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       }
-
-      #notif {
-        display: none;
-      }
     </style>
   </head>
   <body>
@@ -22,13 +18,9 @@
           : window.location.pathname;
       if (webPath() == "/basindo/topic-1/poster") {
         window.location.href = "https://www.instagram.com/p/C_iTpsWSm8m";
-      } else {
-        document.querySelector("#notif").style.display = "block";
       }
     </script>
-    <div id="notif">
-      <h1>Oops...</h1>
-      <p>Disini tidak ada tugas. Coba kunjungi tautan yang telah dibagikan.</p>
-    </div>
+    <h1>Oops...</h1>
+    <p>Disini tidak ada tugas. Coba kunjungi tautan yang telah dibagikan.</p>
   </body>
 </html>
