@@ -16,11 +16,16 @@
         window.location.pathname.endsWith("/")
           ? window.location.pathname.slice(0, -1)
           : window.location.pathname;
-      if (webPath() == "/basindo/topic-1/poster") {
-        window.location.href = "https://www.instagram.com/p/C_iTpsWSm8m";
+      switch(webPath()) {
+        case "/basindo/topic-1/poster":
+          window.location.href = "https://www.instagram.com/p/C_iTpsWSm8m";
+          break;
+        case "/basindo/topic-2/laporan-awal":
+          window.location.href = "https://drive.google.com/file/d/1D90eX-N2ObgJJbJl_bAFBLZGPbRkZXcX/view?usp=drivesdk";
+          break;
+        default:
+          alert("Kamu tidak akan menemukan apapun disini. Mohon kunjungi tautan asli yang telah dibagikan.");
       }
     </script>
-    <h1>Oops...</h1>
-    <p>Disini tidak ada tugas. Coba kunjungi tautan yang telah dibagikan.</p>
   </body>
 </html>
