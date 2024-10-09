@@ -4,11 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>My Assignments</title>
-    <style>
-      body {
-        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-      }
-    </style>
   </head>
   <body>
     <script>
@@ -16,12 +11,17 @@
         window.location.pathname.endsWith("/")
           ? window.location.pathname.slice(0, -1)
           : window.location.pathname;
+      const redirect = url => window.location.href = url;
+      
       switch(webPath()) {
         case "/basindo/topic-1/poster":
-          window.location.href = "https://www.instagram.com/p/C_iTpsWSm8m";
+          redirect("https://www.instagram.com/p/C_iTpsWSm8m");
           break;
         case "/basindo/topic-2/laporan-awal":
-          window.location.href = "https://drive.google.com/file/d/1D90eX-N2ObgJJbJl_bAFBLZGPbRkZXcX/view?usp=drivesdk";
+          redirect("https://drive.google.com/file/d/1D90eX-N2ObgJJbJl_bAFBLZGPbRkZXcX/view?usp=drivesdk");
+          break;
+        case "/pot-gantung":
+          redirect("https://www.instagram.com/p/DA4ErWYT6Hj");
           break;
         default:
           alert("Kamu tidak akan menemukan apapun disini. Mohon kunjungi tautan asli yang telah dibagikan.");
